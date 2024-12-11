@@ -144,7 +144,7 @@ namespace Dawnsbury.Mods.DawnniExpanded.Ancestries
                 }.WithActionCost(2)
                 .WithProjectileCone((Illustration)IllustrationName.BreathWeapon, 25, ProjectileKind.Cone)
                 .WithSavingThrow(new SavingThrow(savingThrow, (Func<Creature, int>)(_ => GetClassOrSpellDC(qf.Owner))))
-                .WithGoodnessAgainstEnemy((Func<Target, Creature, Creature, float>)((tg, a, d) => damage.ExpectedValue))
+                .WithGoodnessAgainstEnemy((Func<Target, Creature, Creature, float>)((tg, a, d) => damage.ExpectedValueMinimumOne))
                 .WithSoundEffect(soundEffect)
                 .WithEffectOnEachTarget(async (spell, caster, defender, result) =>
                 await CommonSpellEffects.DealBasicDamage(spell, caster, defender, result, damage, damageKind))
