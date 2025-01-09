@@ -432,9 +432,9 @@ namespace Dawnsbury.Mods.DawnniExpanded
          StartOfCombat = (async (QEffect qf) =>
          {
            qf.Owner.Battle.Cinematics.EnterCutscene();
-           await qf.Owner.Battle.Cinematics.LineAsync(qf.Owner, "The filthy rats of the city have finally clawed their way into my garden, the so called civilized animals do not dance to beautiful tunes.");
-           await qf.Owner.Battle.Cinematics.LineAsync(qf.Owner, "You rats protect the unnatural and unholy, those who destory the world brick by brick. I will not allow it.");
-           await qf.Owner.Battle.Cinematics.LineAsync(qf.Owner, "Nor will the friends of the wilds. Comrades, dance with these intruders!");
+           await qf.Owner.Battle.Cinematics.LineAsync(qf.Owner, "The filthy rats of the city have finally clawed their way into my garden, the so called civilized animals do not dance to beautiful tunes.", null);
+           await qf.Owner.Battle.Cinematics.LineAsync(qf.Owner, "You rats protect the unnatural and unholy, those who destory the world brick by brick. I will not allow it.", null);
+           await qf.Owner.Battle.Cinematics.LineAsync(qf.Owner, "Nor will the friends of the wilds. Comrades, dance with these intruders!", null);
            qf.Owner.Battle.Cinematics.ExitCutscene();
          }),
 
